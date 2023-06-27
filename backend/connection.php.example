@@ -1,0 +1,13 @@
+<?php
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "fortunewheel_db";
+
+$connection = new mysqli($servername, $username, $password, $db);
+
+if ($connection->connect_error) {
+    echo "oops something went wrong";
+    die();
+}

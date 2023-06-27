@@ -1,0 +1,278 @@
+body {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    background-color: #997dba;
+}
+
+
+#bg-container {
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+#canvas {
+    width: 100vw;
+    height: 100vw;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    min-height: 45vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.translate-middle-x-full-screen {
+    transform: translateX(-257%)!important;
+}
+
+
+.circle {
+    width: 4em;
+    height: 4em;
+    padding: 0px;
+    border-radius: 50%;
+    border: 2px white solid;
+    z-index: 100;
+}
+
+.point {
+    z-index: 200;
+}
+
+.end-5{
+    right: 12% !important;
+}
+.top-50 {
+    top: 51% !important;
+}
+/* .translate-middle{
+    transform: translate(-50%,-80%)!important;
+} */
+
+#canvas {
+    background-image: url("../img/lingkaran.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 2560px) {
+
+    .point{
+        width: 14em;
+        height: 9em;
+    }
+    .circle {
+        width: 6em;
+        height: 6em;
+        border-radius: 50%;
+        border: 0.5em white solid;
+        font-size: 3em;
+        font-weight: bold;
+        z-index: 100;
+    }
+
+    .end-5{
+        right: 3%!important;
+    }
+
+    .top-50{
+        top: 49.75% !important;
+    }
+    
+}
+
+@media screen and (max-width: 1440px){
+    .circle {
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+        border: 2px white solid;
+        font-size: 2em;
+        font-weight: bold;
+        z-index: 100;
+    }
+
+    .end-5{
+        right: 1%!important;
+    }
+
+    .top-50{
+        top: 49.75% !important;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .end-5{
+        right: 1%!important;
+    }
+
+    .top-50{
+        top: 49.5% !important;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .logo {
+        width: 128px !important;
+        height: 49px !important;
+    }
+
+    .point {
+        width: 46px !important;
+        height: 30px !important;
+        z-index: 200;
+    }
+
+    .circle {
+        width: 3em !important;
+        height: 3em !important;
+        border: 2px white solid;
+        z-index: 100;
+    }
+
+
+    #canvas {
+        height: 90vw;
+        width: 90vw;
+    }
+    .container {
+        width: 100%;
+    }
+    #canvas {
+        background-image: url("../img/lingkaran.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .end-5{
+        right: 3%!important;
+    }
+
+    .top-50 {
+        top: 49.5%!important;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .logo {
+        width: 128px !important;
+        height: 49px !important;
+    }
+
+    #canvas {
+        width: 90vw;
+        height: 90vw;
+    }
+    .container {
+        width: 100%;
+    }
+    #canvas {
+        background-image: url("../img/lingkaran.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .end-5{
+        right: 1%!important;
+    }
+    .top-50{
+        top: 49% !important;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .logo {
+        width: 128px !important;
+        height: 49px !important;
+    }
+
+    .point {
+        width: 46px !important;
+        height: 30px !important;
+        z-index: 200;
+    }
+
+    .circle {
+        font-size: 16px;
+        border: 2px white solid;
+        z-index: 100;
+    }
+
+    #canvas {
+        width: 100vw;
+        height: 100vw;
+    }
+
+    .container {
+        width: 100%;
+    }
+    #canvas {
+        background-image: url("../img/lingkaran.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .end-5{
+        right: 0%!important;
+    }
+
+    .top-50{
+        top: 49.15% !important;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .logo {
+        width: 64px !important;
+        height: 29px !important;
+    }
+
+    .point {
+        width: 26px !important;
+        height: 14px !important;
+        z-index: 200;
+    }
+
+    .circle {
+        width: 3em !important;
+        height: 3em !important;
+        font-size: 8px;
+        border: 2px white solid;
+        z-index: 100;
+    }
+
+    #canvas {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .translate-middle-x-full-screen {
+        transform: translateX(-190%)!important;
+    }
+
+    .container {
+        width: 100%;
+    }
+    #canvas {
+        background-image: url("../img/lingkaran.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .end-5{
+        right: 1.5%!important;
+    }
+    .top-50{
+        top: 47.5% !important;
+    }
+}
+
