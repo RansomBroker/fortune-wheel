@@ -16,7 +16,7 @@ let theWheel = new Winwheel({
   outerRadius: 142,
   centerX: 177,
   centerY: 175, // Set outer radius as number.
-  pointerAngle: 45,
+  pointerAngle: 90,
   segments: [{ fillStyle: "", text: "" }],
   // Note animation properties passed in constructor parameters.
   animation: {
