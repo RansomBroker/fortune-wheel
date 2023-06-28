@@ -22,7 +22,7 @@ let theWheel = new Winwheel({
   animation: {
     type: "spinToStop", // Type of animation.
     duration: 5, // How long the animation is to take in seconds.
-    spins: 15, // The number of complete 360 degree rotations the wheel is to do.
+    spins: 8, // The number of complete 360 degree rotations the wheel is to do.
     callbackFinished: "alertPrized()",
   },
 });
@@ -47,7 +47,6 @@ async function startSpin() {
   let spinRequest = await fetch("./backend/spin-prize.php", { method: "GET" });
   let spinResponse = await spinRequest.json();
 
-  console.log(spinResponse);
   if (spinResponse.hasOwnProperty("resp")) {
     if (spinResponse.resp == 0) {
       Swal.fire({
@@ -66,7 +65,7 @@ async function initialData() {
   let bgElement = $("#bg-container");
   let bgRequest = await fetch("./backend/get-settings.php", { method: "GET" });
   let [bgResponse] = await bgRequest.json();
-  console.log(bgResponse);
+
   if (bgResponse.length > 0) {
     // bg
     if (bgResponse[1] != null) {
@@ -117,7 +116,6 @@ async function initialData() {
   console.log(initialData);
   if (initialData.length > 0) {
     initialData.forEach(function (value, num) {
-      console.log(num % 2 == 0 ? "#f42d92" : "#5dc1d8");
       let image = new Image(24);
       image.src = "./img/" + value[3];
       image.onload = function () {
@@ -132,7 +130,6 @@ async function initialData() {
         theWheel.draw();
       };
     });
-    console.log(theWheel.segments);
   }
 }
 
