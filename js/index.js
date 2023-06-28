@@ -12,7 +12,7 @@ let theWheel = new Winwheel({
   textFillStyle: "white",
   textAlignment: "inner",
   // textOrientation: "curved",
-  textMargin: 56,
+  textMargin: 128,
   outerRadius: 142,
   centerX: 177,
   centerY: 175, // Set outer radius as number.
@@ -191,27 +191,33 @@ window.onload = function () {
   initialData();
   console.log("successfull load");
   if (window.innerWidth >= 1000) {
-    theWheel.textFontSize = 16;
-    theWheel.outerRadius = 250;
-    theWheel.centerX = 300;
-    theWheel.centerY = 300;
+    theWheel.textFontSize = 48;
+    theWheel.outerRadius = 782;
+    theWheel.centerX = 965;
+    theWheel.centerY = 955;
   } else if (window.innerWidth >= 800) {
-    theWheel.textFontSize = 16;
-    theWheel.outerRadius = 200;
-    theWheel.centerX = 250;
-    theWheel.centerY = 250;
+    theWheel.outerRadius = 782;
+    theWheel.textFontSize = 48;
+    theWheel.textMargin = 164;
+    theWheel.centerX = 965;
+    theWheel.centerY = 955;
   } else if (window.innerWidth >= 460) {
-    theWheel.textFontSize = 16;
-    theWheel.outerRadius = 250;
-    theWheel.centerX = 300;
-    theWheel.centerY = 300;
+    theWheel.outerRadius = 782;
+    theWheel.textFontSize = 48;
+    theWheel.textMargin = 164;
+    theWheel.centerX = 965;
+    theWheel.centerY = 955;
   } else if (window.innerWidth >= 320) {
-    theWheel.outerRadius = 250;
-    theWheel.centerX = 300;
-    theWheel.centerY = 300;
+    theWheel.outerRadius = 782;
+    theWheel.textFontSize = 48;
+    theWheel.textMargin = 164;
+    theWheel.centerX = 965;
+    theWheel.centerY = 955;
   } else if (window.innerWidth <= 320) {
-    theWheel.outerRadius = 250;
-    theWheel.centerX = 300;
-    theWheel.centerY = 300;
+    theWheel.outerRadius = 782;
+    theWheel.textFontSize = 48;
+    theWheel.textMargin = 164;
+    theWheel.centerX = 965;
+    theWheel.centerY = 945;
   }
 };

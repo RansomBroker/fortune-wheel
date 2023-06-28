@@ -557,8 +557,8 @@ Winwheel.prototype.drawSegmentImages = function () {
           let imageDirection = "";
 
           // Get scaled width and height of the segment image.
-          let scaledWidth = 100;
-          let scaledHeight = 100;
+          let scaledWidth = 96;
+          let scaledHeight = 96;
 
           if (seg.imageDirection !== null) {
             imageDirection = seg.imageDirection;
@@ -571,7 +571,7 @@ Winwheel.prototype.drawSegmentImages = function () {
             imageLeft = centerX - scaledWidth / 2;
 
             // Top so image starts at the centerY.
-            imageTop = 50;
+            imageTop = 185;
 
             // Angle to draw the image is its starting angle + half its size.
             // Here we add 180 to the angle to the segment is poistioned correctly.
@@ -620,6 +620,7 @@ Winwheel.prototype.drawSegmentImages = function () {
           // So math here is the rotation angle of the wheel plus half way between the start and end angle of the segment.
           this.ctx.rotate(this.degToRad(this.rotationAngle + imageAngle));
           this.ctx.translate(-centerX, -centerY);
+          console.log(imageTop);
 
           // Draw the image passing the scaled width and height so that it can be responsive.
           this.ctx.drawImage(
