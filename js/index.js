@@ -32,7 +32,7 @@ function alertPrized() {
   applause.play();
   Swal.fire({
     text: "Selamat kamu memenangkan " + winningSegment.text + "!",
-    allowOutsideClick: true,
+    allowOutsideClick: false,
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
