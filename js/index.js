@@ -7,14 +7,16 @@ let theWheel = new Winwheel({
   drawText: true,
   drawMode: "segmentImage",
   fillStyle: "white",
-  textFontSize: 14,
+  textFontSize: 24,
+  textFontWeight: "Bold",
   textFillStyle: "white",
   textAlignment: "inner",
-  textMargin: 60,
+  // textOrientation: "curved",
+  textMargin: 56,
   outerRadius: 142,
   centerX: 177,
   centerY: 175, // Set outer radius as number.
-  pointerAngle: 90,
+  pointerAngle: 45,
   segments: [{ fillStyle: "", text: "" }],
   // Note animation properties passed in constructor parameters.
   animation: {
@@ -30,7 +32,7 @@ function alertPrized() {
   applause.play();
   Swal.fire({
     text: "Selamat kamu memenangkan " + winningSegment.text + "!",
-    allowOutsideClick: false,
+    allowOutsideClick: true,
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
@@ -63,14 +65,14 @@ async function startSpin() {
 async function initialData() {
   let bgElement = $("#bg-container");
   let bgRequest = await fetch("./backend/get-settings.php", { method: "GET" });
-  let bgResponse = await bgRequest.json();
+  let [bgResponse] = await bgRequest.json();
   console.log(bgResponse);
   if (bgResponse.length > 0) {
     // bg
-    if (bgResponse[0][1] != null) {
+    if (bgResponse[1] != null) {
       bgElement.css(
         "background-image",
-        'url("./img/assets/' + bgResponse[0][1] + '")'
+        'url("./img/assets/' + bgResponse[1] + '")'
       );
     } else {
       bgElement.css(
@@ -79,26 +81,26 @@ async function initialData() {
       );
     }
     // logo
-    if (bgResponse[0][2] != null) {
-      $("#logo-img").attr("src", "./img/assets/" + bgResponse[0][2]);
+    if (bgResponse[2] != null) {
+      $("#logo-img").attr("src", "./img/assets/" + bgResponse[2]);
     } else {
       $("#logo-img").attr("src", "./img/assets/logo-default.png");
     }
     // header
-    if (bgResponse[0][3] != null) {
-      $("#header-img").attr("src", "./img/assets/" + bgResponse[0][3]);
+    if (bgResponse[3] != null) {
+      $("#header-img").attr("src", "./img/assets/" + bgResponse[3]);
     } else {
       $("#header-img").attr("src", "./img/assets/header-default.img");
     }
     // body
-    if (bgResponse[0][4] != null) {
-      $("#body-img").attr("src", "./img/assets/" + bgResponse[0][4]);
+    if (bgResponse[4] != null) {
+      $("#body-img").attr("src", "./img/assets/" + bgResponse[4]);
     } else {
       $("#body-img").attr("src", "./img/assets/body-default.png");
     }
     // footer
-    if (bgResponse[0][5] != null) {
-      $("#footer-img").attr("src", "./img/assets/" + bgResponse[0][5]);
+    if (bgResponse[5] != null) {
+      $("#footer-img").attr("src", "./img/assets/" + bgResponse[5]);
     } else {
       $("#footer-img").attr("src", "./img/assets/footer-default.png");
     }

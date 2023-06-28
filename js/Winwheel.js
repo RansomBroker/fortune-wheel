@@ -559,8 +559,8 @@ Winwheel.prototype.drawSegmentImages = function () {
           let imageDirection = "";
 
           // Get scaled width and height of the segment image.
-          let scaledWidth = 48;
-          let scaledHeight = 48;
+          let scaledWidth = 24;
+          let scaledHeight = 24;
 
           if (seg.imageDirection !== null) {
             imageDirection = seg.imageDirection;
