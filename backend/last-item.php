@@ -1,5 +1,5 @@
 <?php
-require_once ('connection.php');
+require_once('connection.php');
 
 $query = $connection->query("SELECT * FROM labels")->fetch_all();
 
